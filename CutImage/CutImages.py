@@ -1,4 +1,5 @@
-import Image
+# import Image
+from PIL import Image
 import string
 import os
 import json
@@ -22,7 +23,7 @@ def CutImageByJson(jsonStr, savePath):
 
 	jsonObj = json.loads(jsonStr)
 	imgs = Image.open('./1.png')
-	imgs = imgs.convert('RGBA')
+	# imgs = imgs.convert('RGBA')
 	obj = jsonObj['frames']
 	for key in obj:
 		value = obj[key]
